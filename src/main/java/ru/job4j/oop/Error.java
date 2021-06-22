@@ -11,13 +11,13 @@ public class Error {
         this.message = message;
     }
 
+    public Error() {
+    }
+
     public void printError() {
         System.out.println(active);
         System.out.println(status);
         System.out.println(message);
-    }
-
-    public Error() {
     }
 
     public static void main(String[] args) {
