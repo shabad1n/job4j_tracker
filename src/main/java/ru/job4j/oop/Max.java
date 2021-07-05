@@ -14,7 +14,7 @@ public class Max {
     }
 
     public static void main(String[] args) {
-        int rsl = max(1, 2, 3, 4);
+        int rsl = max(1, 1, 3, 4);
         System.out.println(rsl);
     }
 }
