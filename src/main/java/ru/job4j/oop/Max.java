@@ -7,18 +7,15 @@ public class Max {
     }
 
     public static int max(int first, int second, int third) {
-        int temp = Math.max(first, second);
-        return Math.max(temp, third);
+        return Math.max(first, max(second, third));
     }
 
     public static int max(int first, int second, int third, int fourth) {
-        int firstmax =  Math.max(first, second);
-        int secondmax = Math.max(third, fourth);
-        return Math.max(firstmax, secondmax);
+        return Math.max(max(first, second), max(third, fourth));
     }
 
     public static void main(String[] args) {
-        int rsl = Max.max(1, 1, 3, 4);
+        int rsl = Max.max(1, 1, 3);
         System.out.println(rsl);
     }
 }
