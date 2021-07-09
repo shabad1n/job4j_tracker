@@ -9,9 +9,6 @@ public class Surgeon extends Doctor {
         this.tools = tools;
     }
 
-    public  Surgeon() {
-    }
-
     public void inspection() {
     }
 

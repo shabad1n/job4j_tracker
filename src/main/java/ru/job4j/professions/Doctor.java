@@ -11,9 +11,6 @@ public class Doctor extends Profession {
         this.hospitalNumber = hospitalNumber;
     }
 
-    public Doctor() {
-    }
-
     public int getHospitalNumber() {
         return hospitalNumber;
     }

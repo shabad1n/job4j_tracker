@@ -9,9 +9,6 @@ public class Dentist extends Doctor {
         this.interns = interns;
     }
 
-    public Dentist() {
-    }
-
     public void primarySearch() {
     }
 
@@ -19,7 +16,7 @@ public class Dentist extends Doctor {
     }
 
     public static void main(String[] args) {
-        Dentist max = new Dentist();
+        Dentist max = new Dentist("Ivan", "Petrov", "higher", "05.05.1995", 163, true);
         max.primarySearch();
     }
 }

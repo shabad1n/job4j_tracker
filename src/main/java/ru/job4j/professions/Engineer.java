@@ -13,9 +13,6 @@ public class Engineer extends Profession {
         this.status = status;
     }
 
-    public Engineer() {
-    }
-
     public boolean getSecrecy() {
         return secrecy;
     }

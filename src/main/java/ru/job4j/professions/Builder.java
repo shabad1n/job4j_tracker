@@ -9,9 +9,6 @@ public class Builder extends Engineer {
         this.objectOfWwork = objectOfWwork;
     }
 
-    public Builder() {
-    }
-
     public void sketchProject() {
     }
 
@@ -19,8 +16,8 @@ public class Builder extends Engineer {
     }
 
     public static void main(String[] args) {
-        Builder Kirill = new Builder();
-        Builder Alex = new Builder();
+        Builder Kirill = new Builder("Ivan", "Petrov", "higher", "05.05.1995", true, true, "junior", "sсhool");
+        Builder Alex = new Builder("Ivan", "Petrov", "higher", "05.05.1995", true, true, "junior", "sсhool");
         Kirill.danse(); // Наследование метода danse от класса Engineer
         Alex.sketchProject();
     }
