@@ -1,6 +1,4 @@
-package pojo;
-
-import java.util.Date;
+package ru.job4j.pojo;
 
 public class Student {
 
