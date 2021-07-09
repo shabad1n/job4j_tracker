@@ -10,11 +10,11 @@ public class Config {
         this.name = name;
     }
 
-    void print() {
+    public void print() {
         System.out.println(position);
     }
 
-    public String getProperty(String key) {
+    private String getProperty(String key) {
         return search(key);
     }
 
