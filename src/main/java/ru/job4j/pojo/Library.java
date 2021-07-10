@@ -22,10 +22,14 @@ public class Library {
                 firstShelf[0] = firstShelf[2];
                 firstShelf[2] = temp;
             }
-        }
-        for (int i = 0; i < firstShelf.length; i++) {
             Book bn = firstShelf[i];
             System.out.println(bn.getName() + " - " + bn.getCount() + " p.");
+        }
+        for (int i = 0; i < firstShelf.length; i++) {
+          Book bh = firstShelf[i];
+            if (bh.getName() == "Clean code") {
+                System.out.println(bh.getName());
+            }
         }
     }
 }
