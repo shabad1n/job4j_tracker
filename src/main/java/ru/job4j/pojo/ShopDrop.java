@@ -3,19 +3,10 @@ package ru.job4j.pojo;
 public class ShopDrop {
 
     public static Product[] delete(Product[] products, int index) {
-        for(int i = 0; i < products.length; i++) {
-            if (i == index && i != products.length - 1) {
-                while (i != products.length - 1) {
-                    products[i] = products[i + 1];
-                    i++;
-                    if(i == products.length - 1) {
-                        products[i] = null;
-                    }
-                }
-            } else if(i == products.length - 1) {
-                products[i] = null;
-            }
+        for(int i = index; i < products.length - 1; i++) {
+                products[i] = products[i + 1];
         }
+        products[products.length - 1] = null;
         return products;
     }
 
@@ -30,8 +21,6 @@ public class ShopDrop {
             Product product = products[i];
             System.out.println(products[i].getName());
         }
-        products[1] = products[2];
-        products[2] = null;
         ShopDrop.delete(products, 1);
         for (int i = 0; i < products.length; i++) {
             Product product = products[i];
