@@ -12,20 +12,21 @@ public class Library {
         firstShelf[1] = tenLittleNiggers;
         firstShelf[2] = harryPotter;
         firstShelf[3] = lordOfTheRings;
-        for (int i = 0; i < firstShelf.length; i++) {
-            Book bn = firstShelf[i];
+        for (Book bn : firstShelf) {
+            System.out.println(bn.getName() + " - " + bn.getCount() + " p.");
+        }
+        Book temp = firstShelf[0];
+        firstShelf[0] = firstShelf[2];
+        firstShelf[2] = temp;
+        for (Book bn : firstShelf) {
             System.out.println(bn.getName() + " - " + bn.getCount() + " p.");
         }
         for (int i = 0; i < firstShelf.length; i++) {
-            if (i == 0 && firstShelf.length > 2) {
-                Book temp = firstShelf[0];
-                firstShelf[0] = firstShelf[2];
-                firstShelf[2] = temp;
+            Book bn = firstShelf[i];
+            if (bn.getName().equals(cleanCode.getName())) {
+                System.out.println(bn.getName());
+                break;
             }
-        }
-        for (int i = 0; i < firstShelf.length; i++) {
-            Book bn = firstShelf[i];
-            System.out.println(bn.getName() + " - " + bn.getCount() + " p.");
         }
     }
 }

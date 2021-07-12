@@ -35,10 +35,8 @@ public class Item {
         this.name = name;
     }
 
-    public String getCreated() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
-        String currentDateTimeFormat = created.format(formatter);
-        return currentDateTimeFormat;
+    public LocalDateTime getCreated() {
+        return created;
     }
 
 }
