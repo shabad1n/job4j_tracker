@@ -8,7 +8,7 @@ public class Police {
         License license = new License();
         license.setOwner("Kirill Gavrilov");
         license.setModel("Toyota");
-        license.setCode("xx111x");
+        license.setCode("xx1111x");
         license.setCreated(new Date());
 
         System.out.println(license.getOwner() + " has a car - " + license.getModel() + " : " + license.getCode());
