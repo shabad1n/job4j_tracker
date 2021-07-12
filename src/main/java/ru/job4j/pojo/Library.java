@@ -5,7 +5,7 @@ public class Library {
     public static void main(String[] args) {
         Book cleanCode = new Book("Clean code", 459);
         Book tenLittleNiggers = new Book("Ten Little Niggers", 345);
-        Book harryPotter = new Book("Harry Potter", 565);
+        Book harryPotter = new Book("Harry Potter", 566);
         Book lordOfTheRings = new Book("Lord Of The Rings", 782);
         Book[] firstShelf = new Book[4];
         firstShelf[0] = cleanCode;
