@@ -45,6 +45,28 @@ public class Tracker {
         return arrayName;
     }
 
+    private int indexOf(int id) {
+        int rsl = -1;
+        for (int index = 0; index < size; index++) {
+            if (items[index].getId() == id) {
+                rsl = index;
+                break;
+            }
+        }
+        return rsl;
+    }
+
+    public boolean replace(int id, Item item) {
+        int index = indexOf(id);
+        boolean rsl = false;
+        if(index != -1) {
+            items[index].setName(item.getName());
+            rsl = true;
+            System.out.println(items[index].getName());
+        }
+        return rsl;
+    }
+
     public static void main(String[] args) {
         Tracker tracker = new Tracker();
         Item first = new Item("First");
@@ -55,5 +77,7 @@ public class Tracker {
         tracker.add(new Item("Second"));
         tracker.add(new Item("First"));
         tracker.findByName(first.getName());
+        Item third = new Item("Third");
+        tracker.replace(3, third);
     }
 }
