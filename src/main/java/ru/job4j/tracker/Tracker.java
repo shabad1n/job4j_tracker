@@ -65,7 +65,19 @@ public class Tracker {
         return rsl;
     }
 
-    public static void main(String[] args) {
+    public boolean delete(int id) {
+        boolean rsl = false;
+        int index = indexOf(id);
+        if(index != -1) {
+            System.arraycopy(items, index + 1, items, index, size - index - 1);
+            items[size - 1] = null;
+            size--;
+            rsl = true;
+        }
+        return rsl;
+    }
+
+        public static void main(String[] args) {
         Tracker tracker = new Tracker();
         Item first = new Item("First");
         Item second = new Item("Second");
@@ -76,6 +88,7 @@ public class Tracker {
         tracker.add(new Item("First"));
         tracker.findByName(first.getName());
         Item third = new Item("Third");
-        tracker.replace(3, third);
+      //  tracker.replace(3, third);
+        tracker.delete(1);
     }
 }
