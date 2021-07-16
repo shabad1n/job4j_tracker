@@ -13,7 +13,7 @@ public class Matches {
             System.out.println(player + " введите число от 1 до 3:");
             int matches = Integer.parseInt(input.nextLine());
             while (matches < 0 || matches > 3) {
-                System.out.println(player + " введите число от 1 до 3:");
+                System.out.println("Ввод не валиден, введите еще раз");
                 matches = Integer.parseInt(input.nextLine());
             }
             count -= matches;
