@@ -16,8 +16,8 @@ public class Programmer extends Engineer {
     }
 
     public static void main(String[] args) {
-        Programmer Ivan = new Programmer("Ivan", "Petrov", "higher", "05.05.1995", true, true, "junior", true);
-        System.out.println(Ivan.getName());
-        Ivan.composeTR();
+        Programmer ivan = new Programmer("IVan", "Petrov", "higher", "05.05.1995", true, true, "junior", true);
+        System.out.println(ivan.getName());
+        ivan.composeTR();
     }
 }
