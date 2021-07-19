@@ -27,4 +27,8 @@ public class Engineer extends Profession {
 
     public void danse() {
     }
+
+    public static void main(String[] args) {
+        Engineer ivan = new Engineer("Ivan", "Petrov", "higher", "05.05.1995", true, true, "junior");
+    }
 }
