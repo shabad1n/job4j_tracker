@@ -38,10 +38,9 @@ public class StartUITest {
         Item sqrt = new Item("test");
         tracker.add(item);
         tracker.add(sqrt);
-        String[] answers = {"1"};
+        String[] answers = {String.valueOf(item.getId())};
         StartUI.deleteItem(new StubInput(answers), tracker);
-        Item[] arr = tracker.findAll();
-        Item replaced = tracker.findById(arr.length - 1);
+        Item replaced = tracker.findById(item.getId());
         assertThat(replaced, is(nullValue()));
     }
 }
