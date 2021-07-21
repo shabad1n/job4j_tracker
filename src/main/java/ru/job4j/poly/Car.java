@@ -8,6 +8,6 @@ public class Car implements Vehicle {
     }
 
     public void maxSpeed() {
-        int speed = 200;
+        int speed = 100;
     }
 }
