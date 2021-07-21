@@ -16,7 +16,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         UserAction[] actions = {
                 new CreateAction(output),
-                new ExitProgramAction()
+                new ExitProgramAction(output)
         };
         new StartUI(output).init(in, tracker, actions);
         assertThat(tracker.findAll()[0].getName(), is("Item name"));
@@ -33,7 +33,7 @@ public class StartUITest {
         );
         UserAction[] actions = {
                 new ReplaceAction(output),
-                new ExitProgramAction()
+                new ExitProgramAction(output)
         };
         new StartUI(output).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()).getName(), is(replacedName));
@@ -49,7 +49,7 @@ public class StartUITest {
         );
         UserAction[] actions = {
                 new DeleteAction(output),
-                new ExitProgramAction()
+                new ExitProgramAction(output)
         };
         new StartUI(output).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()), is(nullValue()));
@@ -63,12 +63,86 @@ public class StartUITest {
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
-                new ExitProgramAction()
+                new ExitProgramAction(out)
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu :" + System.lineSeparator() +
-                        "0. Exit" + System.lineSeparator()
+                "Menu:" + System.lineSeparator() +
+                        "0. Exit Program" + System.lineSeparator()
+        ));
+    }
+    @Test
+    public void whenFindAllItem() {
+        Output output = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"0", "1"}
+        );
+        Tracker tracker = new Tracker();
+        Item qwe = tracker.add(new Item("sqrt"));
+        UserAction[] actions = {
+                new FindAllAction(output),
+                new ExitProgramAction(output)
+        };
+        new StartUI(output).init(in, tracker, actions);
+        assertThat(output.toString(), is(
+                "Menu:" + System.lineSeparator() +
+                        "0. Show all items" + System.lineSeparator() +
+                        "1. Exit Program" + System.lineSeparator() +
+                        "=== Show all items ====" + System.lineSeparator() +
+                        "Item{id=1, name='sqrt', created=21-июля-среда-2021}" + System.lineSeparator() +
+                        "Menu:" + System.lineSeparator() +
+                        "0. Show all items" + System.lineSeparator() +
+                        "1. Exit Program" + System.lineSeparator()
+        ));
+    }
+
+    @Test
+    public void whenFindByNameItem() {
+        Output output = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"0", "sqrt" ,"1"}
+        );
+        Tracker tracker = new Tracker();
+        Item qwe = tracker.add(new Item("sqrt"));
+        UserAction[] actions = {
+                new FindByNameAction(output),
+                new ExitProgramAction(output)
+        };
+        new StartUI(output).init(in, tracker, actions);
+        assertThat(output.toString(), is(
+                "Menu:" + System.lineSeparator() +
+                        "0. Find items by name" + System.lineSeparator() +
+                        "1. Exit Program" + System.lineSeparator() +
+                        "=== Find items by name ====" + System.lineSeparator() +
+                        "Item{id=1, name='sqrt', created=21-июля-среда-2021}" + System.lineSeparator() +
+                        "Menu:" + System.lineSeparator() +
+                        "0. Find items by name" + System.lineSeparator() +
+                        "1. Exit Program" + System.lineSeparator()
+        ));
+    }
+
+    @Test
+    public void whenFindByIdItem() {
+        Output output = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"0", "1" ,"1"}
+        );
+        Tracker tracker = new Tracker();
+        Item qwe = tracker.add(new Item("sqrt"));
+        UserAction[] actions = {
+                new FindByIdActon(output),
+                new ExitProgramAction(output)
+        };
+        new StartUI(output).init(in, tracker, actions);
+        assertThat(output.toString(), is(
+                "Menu:" + System.lineSeparator() +
+                        "0. Find item by id" + System.lineSeparator() +
+                        "1. Exit Program" + System.lineSeparator() +
+                        "=== Find item by id ====" + System.lineSeparator() +
+                        "Item{id=1, name='sqrt', created=21-июля-среда-2021}" + System.lineSeparator() +
+                        "Menu:" + System.lineSeparator() +
+                        "0. Find item by id" + System.lineSeparator() +
+                        "1. Exit Program" + System.lineSeparator()
         ));
     }
 }
