@@ -66,7 +66,7 @@ public class StartUI {
                 System.out.println(item);
             }
         } else {
-            System.out.println("Заявки с именем: " + name + " не найдены.");
+            System.out.println("Заявки с именем: " + name + " не наидены.");
         }
     }
 
