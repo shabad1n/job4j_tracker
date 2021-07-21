@@ -2,7 +2,7 @@ package ru.job4j.ex;
 
 public class Fact {
 
-    public int calc(int n) {
+    public static int calc(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Метод вызывается с некоректным аргументом");
         } else {
