@@ -124,11 +124,11 @@ public class StartUITest {
     @Test
     public void whenFindByIdItem() {
         Output output = new StubOutput();
-        Input in = new StubInput(
-                new String[] {"0", "1" ,"1"}
-        );
         Tracker tracker = new Tracker();
         Item qwe = tracker.add(new Item("sqrt"));
+        Input in = new StubInput(
+                new String[] {"0", String.valueOf(qwe.getId()) ,"1"}
+        );
         UserAction[] actions = {
                 new FindByIdActon(output),
                 new ExitProgramAction(output)
