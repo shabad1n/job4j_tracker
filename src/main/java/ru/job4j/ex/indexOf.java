@@ -10,6 +10,8 @@ package ru.job4j.ex;
                     rsl = i;
                     break;
                 }
+            }
+            if(rsl == -1) {
                 throw new ElementNotFoundException("Совпадений не обнаружено");
             }
             return rsl;
