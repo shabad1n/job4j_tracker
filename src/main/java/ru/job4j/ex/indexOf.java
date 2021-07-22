@@ -8,9 +8,9 @@ package ru.job4j.ex;
                 if (value[i].equals(key)) {
                     System.out.println(i);
                     rsl = i;
-                } else {
-                    throw new ElementNotFoundException("Совпадений не обнаружено");
+                    break;
                 }
+                throw new ElementNotFoundException("Совпадений не обнаружено");
             }
             return rsl;
         }
