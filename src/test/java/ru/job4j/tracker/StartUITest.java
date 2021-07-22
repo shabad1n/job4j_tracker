@@ -89,7 +89,7 @@ public class StartUITest {
                         "0. Show all items" + System.lineSeparator() +
                         "1. Exit Program" + System.lineSeparator() +
                         "=== Show all items ====" + System.lineSeparator() +
-                        "Item{id=1, name='sqrt', created=21-июля-среда-2021}" + System.lineSeparator() +
+                        qwe + System.lineSeparator() +
                         "Menu:" + System.lineSeparator() +
                         "0. Show all items" + System.lineSeparator() +
                         "1. Exit Program" + System.lineSeparator()
@@ -114,7 +114,7 @@ public class StartUITest {
                         "0. Find items by name" + System.lineSeparator() +
                         "1. Exit Program" + System.lineSeparator() +
                         "=== Find items by name ====" + System.lineSeparator() +
-                        "Item{id=1, name='sqrt', created=21-июля-среда-2021}" + System.lineSeparator() +
+                        qwe + System.lineSeparator() +
                         "Menu:" + System.lineSeparator() +
                         "0. Find items by name" + System.lineSeparator() +
                         "1. Exit Program" + System.lineSeparator()
@@ -139,7 +139,7 @@ public class StartUITest {
                         "0. Find item by id" + System.lineSeparator() +
                         "1. Exit Program" + System.lineSeparator() +
                         "=== Find item by id ====" + System.lineSeparator() +
-                        "Item{id=1, name='sqrt', created=21-июля-среда-2021}" + System.lineSeparator() +
+                        qwe + System.lineSeparator() +
                         "Menu:" + System.lineSeparator() +
                         "0. Find item by id" + System.lineSeparator() +
                         "1. Exit Program" + System.lineSeparator()
