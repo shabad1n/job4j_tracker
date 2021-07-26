@@ -30,7 +30,7 @@ public class UserStore {
     public static void main(String[] args) {
         User[] users = {
                 new User("Kirill Gavrilov", true),
-                new User("Ivan Ivanov", false)
+                new User("Ivan Ivanov", false),
         };
         try {
             User user = findUser(users, "Kirill Gavrilov");
