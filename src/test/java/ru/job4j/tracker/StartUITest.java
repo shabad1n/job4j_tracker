@@ -11,7 +11,7 @@ public class StartUITest {
     public void whenCreateItem() {
         Output output = new ConsoleOutput();
         Input in = new StubInput(
-                new String[] {"0", "Item name", "1"}
+                new String[]{"0", "Item name", "1"}
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
@@ -29,7 +29,7 @@ public class StartUITest {
         Item item = tracker.add(new Item("Replaced item"));
         String replacedName = "New item name";
         Input in = new StubInput(
-                new String[] {"0", String.valueOf(item.getId()), replacedName, "1"}
+                new String[]{"0", String.valueOf(item.getId()), replacedName, "1"}
         );
         UserAction[] actions = {
                 new ReplaceAction(output),
@@ -45,7 +45,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Deleted item"));
         Input in = new StubInput(
-                new String[] {"0", String.valueOf(item.getId()), "1"}
+                new String[]{"0", String.valueOf(item.getId()), "1"}
         );
         UserAction[] actions = {
                 new DeleteAction(output),
@@ -59,7 +59,7 @@ public class StartUITest {
     public void whenExit() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"0"}
+                new String[]{"0"}
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
@@ -71,11 +71,12 @@ public class StartUITest {
                         "0. Exit Program" + System.lineSeparator()
         ));
     }
+
     @Test
     public void whenFindAllItem() {
         Output output = new StubOutput();
         Input in = new StubInput(
-                new String[] {"0", "1"}
+                new String[]{"0", "1"}
         );
         Tracker tracker = new Tracker();
         Item qwe = tracker.add(new Item("sqrt"));
@@ -100,7 +101,7 @@ public class StartUITest {
     public void whenFindByNameItem() {
         Output output = new StubOutput();
         Input in = new StubInput(
-                new String[] {"0", "sqrt" ,"1"}
+                new String[]{"0", "sqrt", "1"}
         );
         Tracker tracker = new Tracker();
         Item qwe = tracker.add(new Item("sqrt"));
@@ -127,7 +128,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item qwe = tracker.add(new Item("sqrt"));
         Input in = new StubInput(
-                new String[] {"0", String.valueOf(qwe.getId()) ,"1"}
+                new String[]{"0", String.valueOf(qwe.getId()), "1"}
         );
         UserAction[] actions = {
                 new FindByIdActon(output),
@@ -144,5 +145,27 @@ public class StartUITest {
                         "0. Find item by id" + System.lineSeparator() +
                         "1. Exit Program" + System.lineSeparator()
         ));
+    }
+
+    @Test
+    public void whenInvalidExit() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[]{"1", "0"}
+        );
+        Tracker tracker = new Tracker();
+        UserAction[] actions = new UserAction[]{
+                new ExitProgramAction(out)
+        };
+        new StartUI(out).init(in, tracker, actions);
+        String ln = System.lineSeparator();
+        assertThat(out.toString(), is(
+                "Menu:" + ln
+                        + "0. Exit Program" + ln
+                        + "Wrong input, you can select: 0 .. 0" + ln
+                        + "Menu:" + ln
+                        + "0. Exit Program" + ln
+                )
+        );
     }
 }
