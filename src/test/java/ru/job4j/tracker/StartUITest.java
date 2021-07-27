@@ -168,15 +168,4 @@ public class StartUITest {
                 )
         );
     }
-
-    @Test
-    public void ValidatInputFirst() {
-        Output out = new StubOutput();
-        Input in = new StubInput(
-                new String[]{"One", "1"}
-        );
-        ValidateInput input = new ValidateInput(out, in);
-        int selected = input.askInt("Enter menu:");
-        assertThat(selected, is(1));
-    }
 }
