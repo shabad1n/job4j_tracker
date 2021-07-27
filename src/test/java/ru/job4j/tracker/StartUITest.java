@@ -2,8 +2,8 @@ package ru.job4j.tracker;
 
 import org.junit.Test;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.nullValue;
+import static org.junit.Assert.*;
 
 public class StartUITest {
 
@@ -167,5 +167,29 @@ public class StartUITest {
                         + "0. Exit Program" + ln
                 )
         );
+    }
+
+    @Test
+    public void ValidatInputFirst() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[]{"One", "1"}
+        );
+        ValidateInput input = new ValidateInput(out, in);
+        int selected = input.askInt("Enter menu:");
+        assertThat(selected, is(1));
+    }
+
+    @Test
+    public void ValidatInputSecond() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[]{"One", "-1", "1", "2"}
+        );
+        ValidateInput input = new ValidateInput(out, in);
+        int[] results = new int[2];
+        results[0] = input.askInt("Enter menu:");
+        results[1] = input.askInt("Enter menu:");
+        assertArrayEquals(results, new int[]{1, 2});
     }
 }
