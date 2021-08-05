@@ -20,13 +20,8 @@ public final class Airbus {
     }
 
     public void printCountEngine() {
-        int countEngien = 0;
-        if (this.getName().equals("A380")) {
-            countEngien = 4;
+        int countEngien = "A380".equals(name) ? 4 : COUNT_ENGINE;
             System.out.println("Количество двигателей равно: " + countEngien);
-        } else {
-            System.out.println("Количество двигателей равно: " + COUNT_ENGINE);
-        }
     }
 
     @Override
