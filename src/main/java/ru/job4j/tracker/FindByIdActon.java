@@ -17,9 +17,9 @@ public class FindByIdActon implements UserAction {
         int id = input.askInt("Enter id: ");
         Item item = tracker.findById(id);
         if (item != null) {
-           out.println(item);
+            out.println(item);
         } else {
-           out.println("Заявка с введенным id: " + id + " не найдена.");
+            out.println("Заявка с введенным id: " + id + " не найдена.");
         }
         return true;
     }
