@@ -27,6 +27,6 @@ public class PhoneDictionary {
         PhoneDictionary phones = new PhoneDictionary();
         phones.add(new Person("Kirill", "Gavrilov", "123", "321"));
         phones.add(new Person("Kirill", "Petrov", "333", "222"));
-        phones.find("123");
+        phones.find("Kir");
     }
 }
