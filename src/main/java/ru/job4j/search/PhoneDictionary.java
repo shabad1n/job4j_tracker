@@ -13,7 +13,7 @@ public class PhoneDictionary {
     public ArrayList<Person> find(String key) {
         ArrayList<Person> result = new ArrayList<>();
         for (Person person : persons) {
-            if(person.toString().contains(key)) {
+            if(persons.size() > 0 && person.toString().contains(key)) {
                result.add(person);
             }
         }
@@ -27,6 +27,6 @@ public class PhoneDictionary {
         PhoneDictionary phones = new PhoneDictionary();
         phones.add(new Person("Kirill", "Gavrilov", "123", "321"));
         phones.add(new Person("Kirill", "Petrov", "333", "222"));
-        phones.find("Kir");
+        phones.find("123");
     }
 }
