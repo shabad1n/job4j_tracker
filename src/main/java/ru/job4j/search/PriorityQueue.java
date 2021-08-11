@@ -10,9 +10,8 @@ import java.util.LinkedList;
                 for (Task element : tasks) {
                     if (task.getPriority() < element.getPriority()) {
                         break;
-                } else {
-                        index++;
                     }
+                    index++;
             }
             this.tasks.add(index, task);
         }
