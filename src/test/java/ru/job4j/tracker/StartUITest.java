@@ -1,6 +1,10 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.*;
@@ -10,6 +14,7 @@ public class StartUITest {
     @Test
     public void whenCreateItem() {
         Output output = new ConsoleOutput();
+        List<Item> items = new ArrayList<>();
         Input in = new StubInput(
                 new String[]{"0", "Item name", "1"}
         );
@@ -19,7 +24,7 @@ public class StartUITest {
                 new ExitProgramAction(output)
         };
         new StartUI(output).init(in, tracker, actions);
-        assertThat(tracker.findAll()[0].getName(), is("Item name"));
+        assertThat(items.get(0).getName(), is("Item name"));
     }
 
     @Test
