@@ -6,8 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Tracker {
-    private final List<Item> items = new ArrayList<>();
-    //private final Item[] items = new Item[100];
+    final List<Item> items = new ArrayList<>();
     private int ids = 1;
 
     public Item add(Item item) {
@@ -59,7 +58,7 @@ public class Tracker {
         boolean rsl = index != -1;
         if(rsl) {
             item.setId(id);
-            items.set(id, item);
+            items.set(index, item);
         }
         return rsl;
     }

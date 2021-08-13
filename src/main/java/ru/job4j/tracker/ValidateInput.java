@@ -11,7 +11,6 @@ public class ValidateInput implements Input {
 
     @Override
     public String askStr(String question) {
-        System.out.println(in);
         return in.askStr(question);
     }
 

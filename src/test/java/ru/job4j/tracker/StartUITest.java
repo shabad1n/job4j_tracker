@@ -14,17 +14,17 @@ public class StartUITest {
     @Test
     public void whenCreateItem() {
         Output output = new ConsoleOutput();
-        List<Item> items = new ArrayList<>();
         Input in = new StubInput(
                 new String[]{"0", "Item name", "1"}
         );
         Tracker tracker = new Tracker();
+        List<Item> item = tracker.findAll();
         UserAction[] actions = {
                 new CreateAction(output),
                 new ExitProgramAction(output)
         };
         new StartUI(output).init(in, tracker, actions);
-        assertThat(items.get(0).getName(), is("Item name"));
+        assertThat(item.get(0).getName(), is("Item name"));
     }
 
     @Test
