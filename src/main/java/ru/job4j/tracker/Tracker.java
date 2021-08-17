@@ -27,6 +27,7 @@ public class Tracker {
 
     public List<Item> findAll() {
         List copy = List.copyOf(items);
+        List<Item> copy1 = new ArrayList<>(items);
         return copy;
     }
 
