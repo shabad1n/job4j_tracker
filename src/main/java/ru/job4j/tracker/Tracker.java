@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Tracker {
-    final List<Item> items = new ArrayList<>();
+    private final List<Item> items = new ArrayList<>();
     private int ids = 1;
 
     public Item add(Item item) {
@@ -26,19 +26,17 @@ public class Tracker {
     }
 
     public List<Item> findAll() {
-        return items;
+        List copy = List.copyOf(items);
+        return copy;
     }
 
-    public Item[] findByName(String key) {
-        Item[] arrayName = new Item[items.size()];
-        int temp = 0;
+    public List<Item> findByName(String key) {
+        List<Item> arrayName = new ArrayList<>();
         for (Item item : items) {
             if(item.getName().equals(key)) {
-                arrayName[temp] = item;
-                temp++;
+                arrayName.add(item);
             }
         }
-        arrayName = Arrays.copyOf(arrayName, temp);
         return arrayName;
     }
 
@@ -67,7 +65,7 @@ public class Tracker {
         int index = indexOf(id);
         boolean rsl = index != -1;
         if(rsl) {
-            items.remove(items.size() - 1);
+            items.remove(index);
         }
         return rsl;
     }

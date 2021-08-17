@@ -18,11 +18,11 @@ public class StartUITest {
                 new String[]{"0", "Item name", "1"}
         );
         Tracker tracker = new Tracker();
-        List<Item> item = tracker.findAll();
         List<UserAction> actions = Arrays.asList(
                 new CreateAction(output),
                 new ExitProgramAction(output));
         new StartUI(output).init(in, tracker, actions);
+        List<Item> item = tracker.findAll();
         assertThat(item.get(0).getName(), is("Item name"));
     }
 
