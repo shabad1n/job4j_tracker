@@ -11,13 +11,11 @@ public class UniqueText {
         HashSet<String> check = new HashSet<>();
         check.addAll(Arrays.asList(origin));
         for (String dupl : text) {
-            if (rsl) {
-                rsl = check.contains(dupl);
-            } else {
+            if (!check.contains(dupl)) {
+                rsl = false;
                 break;
             }
         }
-        System.out.println(rsl);
         return rsl;
     }
 }
