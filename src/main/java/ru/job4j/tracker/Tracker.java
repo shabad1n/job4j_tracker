@@ -1,9 +1,6 @@
 package ru.job4j.tracker;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Tracker {
     private final List<Item> items = new ArrayList<>();
@@ -81,7 +78,9 @@ public class Tracker {
         tracker.add(new Item("First"));
         tracker.findByName(first.getName());
         Item third = new Item("Third");
-      //  tracker.replace(3, third);
-        tracker.delete(1);
+        System.out.println(tracker.findAll());
+        List<Item> it = new ArrayList<>(tracker.findAll());
+            Collections.sort(it, new SortByNameDescending());
+            System.out.println(it);
     }
 }
