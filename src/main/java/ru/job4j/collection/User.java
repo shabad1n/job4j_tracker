@@ -2,6 +2,7 @@ package ru.job4j.collection;
 
 import java.util.*;
 
+
 public class User implements Comparable<User> {
     private String name;
     private int age;
