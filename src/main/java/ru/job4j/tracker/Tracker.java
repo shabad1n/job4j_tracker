@@ -78,9 +78,5 @@ public class Tracker {
         tracker.add(new Item("First"));
         tracker.findByName(first.getName());
         Item third = new Item("Third");
-        System.out.println(tracker.findAll());
-        List<Item> it = new ArrayList<>(tracker.findAll());
-            Collections.sort(it, new SortByNameDescending());
-            System.out.println(it);
     }
 }
