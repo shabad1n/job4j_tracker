@@ -65,7 +65,7 @@ public class BankService {
      * осуществляться поиск пользователя, а так же номер счета пользовател
      * если пользователь найден производится поиск по ArrayList сравнивая реквизиты
      * @param passport аргумент, передаваемый методу findByPassport для поиска пользователя
-     * @param requisite
+     * @param requisite реквизиты для поиска Account пользователя
      * @return возвращает
      */
     public Account findByRequisite(String passport, String requisite) {
