@@ -1,4 +1,5 @@
 package ru.job4j.collection.map;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -34,8 +35,12 @@ public class ComputeIfAbsent {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             ComputeIfAbsent.User user = (ComputeIfAbsent.User) o;
             return Objects.equals(name, user.name);
         }

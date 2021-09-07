@@ -5,15 +5,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-//Задание: метод принимает отображение - число(id пользователя) - строка(имя пользователя), а также список пользователей.
-//        Возникла проблема - данные в отображении хранились так долго и ранее не было предусмотрено, что помимо имени необходимо хранить еще и фамилию.
-//        Необходимо обновить информацию - если такой пользователь уже существует (проверять по ключу) - то необходимо к имени добавить фамилию,
-//        если нет - то сначала добавить пользователя - ключ id,
-//        значение - имя пользователя, а потом только обновить и добавить фамилию. При решении используйте методы putIfAbsent() и merge().
+//Задание: метод принимает отображение - число(id пользователя) - строка(имя пользователя),
+// а также список пользователей.
+// Возникла проблема - данные в отображении хранились так долго и ранее не было предусмотрено,
+// что помимо имени необходимо хранить еще и фамилию.
+// Необходимо обновить информацию - если такой пользователь уже существует (проверять по ключу)
+// - то необходимо к имени добавить фамилию,
+//  если нет - то сначала добавить пользователя - ключ id,
+//  значение - имя пользователя, а потом только обновить и добавить фамилию.
+//  При решении используйте методы putIfAbsent() и merge().
 
 public class Merge {
     public static Map<Integer, String> collectData(Map<Integer, String> names, List<User> users) {
-        for(User user : users) {
+        for (User user : users) {
             if (!names.containsKey(user.getId())) {
                 names.computeIfAbsent(user.getId(), value -> user.getName());
                 names.merge(user.getId(), user.getSurname(), (oldV, newV) -> oldV + " " + newV);
@@ -23,6 +27,7 @@ public class Merge {
         }
         return names;
     }
+
     public static class User {
         private int id;
         private String name;
@@ -48,8 +53,12 @@ public class Merge {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             User user = (User) o;
             return id == user.id;
         }

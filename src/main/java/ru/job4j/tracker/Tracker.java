@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Tracker {
     private final List<Item> items = new ArrayList<>();
@@ -14,10 +15,11 @@ public class Tracker {
 
     public Item findById(int id) {
         Item rsl = null;
-        for (Item item : items)
+        for (Item item : items) {
             if (item.getId() == id) {
                 rsl = item;
                 break;
+            }
         }
         return rsl;
     }
@@ -30,7 +32,7 @@ public class Tracker {
     public List<Item> findByName(String key) {
         List<Item> arrayName = new ArrayList<>();
         for (Item item : items) {
-            if(item.getName().equals(key)) {
+            if (item.getName().equals(key)) {
                 arrayName.add(item);
             }
         }
@@ -39,11 +41,11 @@ public class Tracker {
 
     private int indexOf(int id) {
         int rsl = -1;
-            for (int index = 0; index < items.size(); index++) {
-                if (items.get(index).getId() == id) {
-                    rsl = index;
-                    break;
-                }
+        for (int index = 0; index < items.size(); index++) {
+            if (items.get(index).getId() == id) {
+                rsl = index;
+                break;
+            }
         }
         return rsl;
     }
@@ -51,7 +53,7 @@ public class Tracker {
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
         boolean rsl = index != -1;
-        if(rsl) {
+        if (rsl) {
             item.setId(id);
             items.set(index, item);
         }
@@ -61,13 +63,13 @@ public class Tracker {
     public boolean delete(int id) {
         int index = indexOf(id);
         boolean rsl = index != -1;
-        if(rsl) {
+        if (rsl) {
             items.remove(index);
         }
         return rsl;
     }
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         Tracker tracker = new Tracker();
         Item first = new Item("First");
         Item second = new Item("Second");

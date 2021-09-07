@@ -6,7 +6,7 @@ import java.util.List;
 public class OrderConvert {
     public static HashMap<String, Order> process(List<Order> orders) {
         HashMap<String, Order> map = new HashMap<>();
-        for(Order list  : orders) {
+        for (Order list  : orders) {
             map.put(list.getNumber(), list);
         }
         return map;

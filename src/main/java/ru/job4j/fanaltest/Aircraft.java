@@ -1,4 +1,4 @@
-package ru.job4j.fanalTest;
+package ru.job4j.fanaltest;
 
 public class Aircraft {
 

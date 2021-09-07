@@ -6,7 +6,8 @@ public class Engineer extends Profession {
     private boolean category;
     private String status;
 
-    public Engineer(String name, String surname, String education, String birthday, boolean secrecy, boolean category, String status) {
+    public Engineer(String name, String surname, String education,
+                    String birthday, boolean secrecy, boolean category, String status) {
         super(name, surname, education, birthday);
         this.secrecy = secrecy;
         this.category = category;
@@ -29,6 +30,7 @@ public class Engineer extends Profession {
     }
 
     public static void main(String[] args) {
-        Engineer ivan = new Engineer("Ivan", "Petrov", "higher", "05.05.1995", true, true, "junior");
+        Engineer ivan = new Engineer("Ivan", "Petrov",
+                "higher", "05.05.1995", true, true, "junior");
     }
 }

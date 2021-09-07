@@ -2,7 +2,6 @@ package ru.job4j.collection.list;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
 public class GeomProgression {
     public static int generateAndSum(int first, int denominator, int count) {
@@ -15,7 +14,7 @@ public class GeomProgression {
             list.add(sum);
             count--;
         }
-        for(int com : list) {
+        for (int com : list) {
             rsl += com;
         }
         System.out.println(rsl);

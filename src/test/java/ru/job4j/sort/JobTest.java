@@ -53,7 +53,8 @@ public class JobTest {
 
     @Test
     public void whenJobByNameAscAndPrioriteDesc() {
-        Comparator<Job> cmpJobByNameAndPriority = new JobSortByNameAsc().thenComparing(new JobSortByPriorityDesc());
+        Comparator<Job> cmpJobByNameAndPriority =
+                new JobSortByNameAsc().thenComparing(new JobSortByPriorityDesc());
         int rsl = cmpJobByNameAndPriority.compare(
                 new Job("Fix", 1),
                 new Job("Fix", 2)

@@ -5,8 +5,8 @@ import java.util.Set;
 public class Firewall {
     public static String checkName(String s, Set<String> words) {
         String rsl = "Вы сделали правильный выбор!";
-        for(String str : words) {
-            if(s.contains(str)) {
+        for (String str : words) {
+            if (s.contains(str)) {
                 rsl = "Выберите другую статью...";
                 break;
             }

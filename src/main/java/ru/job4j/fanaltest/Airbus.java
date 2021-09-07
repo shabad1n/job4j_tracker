@@ -1,6 +1,4 @@
-package ru.job4j.fanalTest;
-
-import java.util.Objects;
+package ru.job4j.fanaltest;
 
 public final class Airbus {
 
@@ -21,7 +19,7 @@ public final class Airbus {
 
     public void printCountEngine() {
         int countEngien = "A380".equals(name) ? 4 : COUNT_ENGINE;
-            System.out.println("Количество двигателей равно: " + countEngien);
+        System.out.println("Количество двигателей равно: " + countEngien);
     }
 
     @Override

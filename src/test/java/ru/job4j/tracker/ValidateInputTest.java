@@ -10,7 +10,7 @@ import static org.junit.Assert.assertThat;
 public class ValidateInputTest {
 
     @Test
-    public void ValidatInputFirst() {
+    public void validatInputFirst() {
         Output out = new StubOutput();
         Input in = new StubInput(
                 new String[]{"One", "1"}
@@ -21,7 +21,7 @@ public class ValidateInputTest {
     }
 
     @Test
-    public void ValidatInputSecond() {
+    public void validatInputSecond() {
         Output out = new StubOutput();
         Input in = new StubInput(
                 new String[]{"1"}
@@ -32,7 +32,7 @@ public class ValidateInputTest {
     }
 
     @Test
-    public void ValidatInputThird() {
+    public void validatInputThird() {
         Output out = new StubOutput();
         Input in = new StubInput(
                 new String[]{"1", "2", "3"}
@@ -47,7 +47,7 @@ public class ValidateInputTest {
     }
 
     @Test
-    public void ValidatInputFourth() {
+    public void validatInputFourth() {
         Output out = new StubOutput();
         Input in = new StubInput(
                 new String[]{"-3"}

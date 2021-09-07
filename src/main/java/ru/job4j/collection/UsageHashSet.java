@@ -12,7 +12,7 @@ public class UsageHashSet {
         autos.add("Volvo");
         autos.add("Toyota");
         Collections.addAll(autos, "Ford", "Infiniti");
-        for(String brand : autos) {
+        for (String brand : autos) {
             System.out.println(brand);
         }
     }

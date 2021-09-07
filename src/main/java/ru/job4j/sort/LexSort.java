@@ -32,7 +32,7 @@ public class LexSort implements Comparator<String> {
                 "2. Task."
         };
         Arrays.sort(input, new LexSort());
-        for(String st : input) {
+        for (String st : input) {
             System.out.println(st);
         }
     }

@@ -9,7 +9,7 @@ public class ArProgression {
         int temp = data.get(1) - data.get(0);
         int sum = data.get(0);
         while (iterator.hasNext()) {
-            if(data.get(iterator.nextIndex()) - data.get(iterator.previousIndex()) == temp) {
+            if (data.get(iterator.nextIndex()) - data.get(iterator.previousIndex()) == temp) {
                 sum += data.get(iterator.nextIndex());
                 iterator.next();
             } else {

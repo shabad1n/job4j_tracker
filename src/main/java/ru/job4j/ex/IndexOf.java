@@ -1,7 +1,6 @@
 package ru.job4j.ex;
 
-    public class indexOf {
-
+    public class IndexOf {
         public static int indexOf(String[] value, String key) throws ElementNotFoundException {
             int rsl = -1;
             for (int i = 0; i < value.length; i++) {
@@ -11,7 +10,7 @@ package ru.job4j.ex;
                     break;
                 }
             }
-            if(rsl == -1) {
+            if (rsl == -1) {
                 throw new ElementNotFoundException("Совпадений не обнаружено");
             }
             return rsl;

@@ -4,7 +4,6 @@ public class Task {
     private String desc;
     private int priority;
 
-
     public Task(String desc, int priority) {
         this.desc = desc;
         this.priority = priority;
@@ -20,9 +19,8 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
-                "desc='" + desc + '\'' +
-                ", priority=" + priority +
-                '}';
+        return "Task{"
+                + "desc='" + desc + '\''
+                + ", priority=" + priority + '}';
     }
 }

@@ -7,6 +7,7 @@ public class College {
         ivan.setFullName("Gavrilov Kirill Alexand");
         ivan.setGroup("222");
         ivan.setDateOfReceipt("12.12.2012");
-        System.out.println(ivan.getFullName() + " Из группы "  + ivan.getGroup() + " родился " + ivan.getDateOfReceipt());
+        System.out.println(ivan.getFullName() + " Из группы "  + ivan.getGroup()
+                + " родился " + ivan.getDateOfReceipt());
     }
 }

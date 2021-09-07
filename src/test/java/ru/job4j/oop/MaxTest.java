@@ -6,7 +6,7 @@ import org.junit.Test;
 public class MaxTest {
 
     @Test
-    public void Max() {
+    public void max() {
         int expected = 4;
         int rsl = Max.max(1, 2, 3, 4);
         Assert.assertEquals(expected, rsl);

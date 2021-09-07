@@ -22,7 +22,7 @@ public class UserStore {
             rsl = true;
             return rsl;
         }
-        if (rsl == false) {
+        if (rsl) {
             throw new UserInvalidException("Юзер не прошел валидацию");
         }
         return rsl;

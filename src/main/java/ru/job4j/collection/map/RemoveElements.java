@@ -5,22 +5,24 @@ import java.util.Map;
 import java.util.Objects;
 
 //Задание: метод принимает отображение ключ(id пользователя) - значение (имя пользователя),
-//        список id пользователей, список пользователей. Необходимо обновить информацию в отображении следующим образом:
+//        список id пользователей, список пользователей.
+//        Необходимо обновить информацию в отображении следующим образом:
 //        1. Удалить все пары ключ-значение которые соответствуют каждому id из списка id
-//        2. Удалить все пары ключ значения, которые соответствуют списку пользователей(тут будет необходимо использовать геттеры,
+//        2. Удалить все пары ключ значения, которые соответствуют списку пользователей
+//        (тут будет необходимо использовать геттеры,
 //        чтобы получить доступ к значениям в полях объектов типа User).
 
 public class RemoveElements {
     public static Map<Integer, String> removeElement(Map<Integer, String> data,
                                                      List<Integer> ids,
                                                      List<User> users) {
-        for(Integer id : ids) {
-            if(data.containsKey(id)) {
+        for (Integer id : ids) {
+            if (data.containsKey(id)) {
                 data.remove(id);
             }
         }
-        for(User user : users) {
-            if(data.containsKey(user.getId())) {
+        for (User user : users) {
+            if (data.containsKey(user.getId())) {
                 data.remove(user.getId(), user.getName());
             }
         }
@@ -46,11 +48,14 @@ public class RemoveElements {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             User user = (User) o;
-            return id == user.id &&
-                    Objects.equals(name, user.name);
+            return id == user.id && Objects.equals(name, user.name);
         }
 
         @Override

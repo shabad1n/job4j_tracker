@@ -6,13 +6,13 @@ public class Alphabet {
 
     public static String reformat(String s) {
         StringBuilder rsl = new StringBuilder();
-        List<String > list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         String[] str = s.split("");
-        for(String string : str) {
+        for (String string : str) {
             list.add(string);
         }
         Collections.sort(list);
-        for(String string : list) {
+        for (String string : list) {
             rsl.append(string);
         }
         return rsl.toString();
