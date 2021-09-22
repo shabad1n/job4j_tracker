@@ -14,8 +14,5 @@ public class LambdaUsage {
             return Integer.compare(right.length(), left.length());
         };
         Arrays.sort(str, comparator);
-        for (String st : str) {
-            System.out.println(st);
-        }
     }
 }
