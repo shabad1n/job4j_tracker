@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Создается новая коллекция при помощи интервейса stream и его методов
+ * Создается новая коллекция при помощи интервейса stream
  */
 
 public class StreamUsage {
