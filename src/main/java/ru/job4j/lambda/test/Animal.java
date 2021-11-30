@@ -2,7 +2,7 @@ package ru.job4j.lambda.test;
 
 import java.util.Objects;
 
-public class Animal {
+public class Animal implements ContractAnimal, Run, Walk, Voice {
     private String name;
     private Integer age;
     private boolean ableToJump;
@@ -11,6 +11,23 @@ public class Animal {
         this.name = name;
         this.age = age;
         this.ableToJump = ableToJump;
+    }
+
+    public Animal() { }
+
+    @Override
+    public String getVoice() {
+        return "Голос";
+    }
+
+    @Override
+    public boolean checkName(Animal animal) {
+        return animal.getName().length() > 0;
+    }
+
+    @Override
+    public int getRunSpeed() {
+        return this.getAge() / 2;
     }
 
     public String getName() {
