@@ -37,8 +37,6 @@ public class CountSortObjects {
             count[i] = count[i] + count[i - 1];
         }
 
-
-
         for (int i = workers.size() - 1; i >= 0; i--) {
             Worker worker = workers.get(i);
             out[count[worker.qualification] - 1] = worker;
