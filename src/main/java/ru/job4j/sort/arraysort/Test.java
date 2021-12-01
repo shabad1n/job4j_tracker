@@ -1,9 +1,8 @@
 package ru.job4j.sort.arraysort;
 
-import ru.job4j.stream.StreamUsage;
+import ru.job4j.stream.school.StreamUsage;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Test extends StreamUsage {
