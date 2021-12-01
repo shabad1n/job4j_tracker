@@ -21,7 +21,7 @@ public class Builder extends Engineer {
                 "05.05.1995", true, true, "junior");
         Builder alex = new Builder("Ivan", "Petrov",
                 "higher", "05.05.1995", true, true, "junior");
-        kirill.danse(); // Наследование метода danse от класса Engineer
+        kirill.danse();
         alex.sketchProject();
     }
 }

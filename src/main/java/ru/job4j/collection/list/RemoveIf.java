@@ -3,9 +3,6 @@ package ru.job4j.collection.list;
 import java.util.ArrayList;
 import java.util.List;
 
-//Задание: необходимо реализовать метод, который вернет список строк,
-// которые состоят из 5 и более символов.
-
 public class RemoveIf {
     public static List<String> sortList(List<String> list) {
         list.removeIf(n -> (n.length() < 5));

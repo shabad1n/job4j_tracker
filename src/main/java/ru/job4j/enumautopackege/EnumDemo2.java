@@ -1,6 +1,5 @@
 package ru.job4j.enumautopackege;
 
-// Класс демонстрирует возможности enum перечисления
 import java.util.Random;
 
 enum Answers {

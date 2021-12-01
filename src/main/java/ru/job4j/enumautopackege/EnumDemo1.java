@@ -1,7 +1,5 @@
 package ru.job4j.enumautopackege;
 
-//Перечисления наследуются от класса Enum, в данном классе расматривается 3 метода класса Enum
-
 public class EnumDemo1 {
 
     public static void main(String[] args) {
@@ -9,7 +7,6 @@ public class EnumDemo1 {
         System.out.println("Все константы сортов яблок "
         + " и их порядковые значения");
         for (Apple a : Apple.values()) {
-            // Метод ordinal получает порядковый номер перечеслиния
             System.out.println(a + " " + a.ordinal());
         }
         ap = Apple.RedDel;
