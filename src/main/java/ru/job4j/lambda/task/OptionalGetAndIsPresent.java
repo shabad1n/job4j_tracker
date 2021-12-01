@@ -20,6 +20,7 @@ public class OptionalGetAndIsPresent {
     }
 
     public static void main(String[] args) {
+
         System.out.println(OptionalGetAndIsPresent.get(new int[] {1, 2, 3}, 2));
     }
 }

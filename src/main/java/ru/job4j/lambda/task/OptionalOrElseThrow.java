@@ -25,7 +25,6 @@ public class OptionalOrElseThrow {
     }
 
     public static User orElseThrow(List<User> list, String login) {
-        // return search(list, login).orElseThrow()
          return search(list, login).orElseThrow(() ->
                  new UserNotFoundException("Логин не существует"));
     }
