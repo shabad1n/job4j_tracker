@@ -1,8 +1,6 @@
 package ru.job4j.stream;
 
 import java.util.List;
-import java.util.Locale;
-import java.util.stream.Collectors;
 
 /**
  * Создается новая коллекция при помощи интервейса stream
