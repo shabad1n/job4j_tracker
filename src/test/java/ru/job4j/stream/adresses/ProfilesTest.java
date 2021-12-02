@@ -11,7 +11,6 @@ import java.util.List;
 import static org.hamcrest.Matchers.is;
 
 public class ProfilesTest {
-
     @Test
     public void getAlistOfAddress() {
         Address msk = new Address("Moscow", "Pobeda", 15, 25);
