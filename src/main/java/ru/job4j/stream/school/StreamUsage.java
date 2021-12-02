@@ -1,6 +1,7 @@
 package ru.job4j.stream.school;
 
 import java.util.List;
+
 public class StreamUsage {
 
     public static class Task {
