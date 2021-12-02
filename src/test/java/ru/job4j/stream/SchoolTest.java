@@ -5,7 +5,9 @@ import ru.job4j.stream.school.School;
 import ru.job4j.stream.school.Student;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 
 import static org.hamcrest.core.Is.is;
@@ -66,5 +68,24 @@ public class SchoolTest {
         expected.add(new Student(30, "Surname3"));
         expected.add(new Student(40, "Surname4"));
         assertThat(rsl, is(expected));
+    }
+
+    @Test
+    public void whenConvertListToMap() {
+        List<Student> students = List.of(
+                new Student(10, "Surname1"),
+                new Student(40, "Surname4"),
+                new Student(50, "Surname4"),
+                new Student(60, "Surname6"),
+                new Student(90, "Surname9")
+        );
+        School sc = new School();
+        Map<String, Student> result = sc.convertListToMap(students);
+        Map<String, Student> expected = new HashMap<>();
+        expected.put("Surname1", new Student(10, "Surname1"));
+        expected.put("Surname4", new Student(40, "Surname4"));
+        expected.put("Surname6", new Student(60, "Surname6"));
+        expected.put("Surname9", new Student(90, "Surname9"));
+        assertThat(result, is(expected));
     }
 }
