@@ -28,4 +28,23 @@ public class ProfilesTest {
         );
         Assert.assertThat(result, is(expected));
     }
+
+    @Test
+    public void getASortedListAddress() {
+        Address msk = new Address("Moscow", "Pobeda", 15, 25);
+        Address spb = new Address("Spb", "Pobeda", 12, 13);
+        Address msk1 = new Address("Moscow", "Pobeda", 15, 25);
+        Address spb1 = new Address("Spb", "Pobeda", 12, 13);
+        Profiles profiles = new Profiles();
+        List<Profile> pr = List.of(
+                new Profile(new Address("Moscow", "Pobeda", 15, 25)),
+                new Profile(new Address("321", "32", 1, 2))
+        );
+        List<Address> result = profiles.collectSorted(pr);
+        List<Address> expected = List.of(
+                new Address("Moscow", "Pobeda", 15, 25),
+                new Address("Spb", "Pobeda", 12, 13)
+        );
+        Assert.assertThat(result, is(expected));
+    }
 }
