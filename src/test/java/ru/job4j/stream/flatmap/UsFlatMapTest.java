@@ -6,7 +6,6 @@ import java.util.List;
 import static org.hamcrest.Matchers.is;
 
 public class UsFlatMapTest {
-
     @Test
     public void convertArrayToList() {
         Integer[][] array = {

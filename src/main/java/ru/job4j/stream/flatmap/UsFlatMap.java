@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class UsFlatMap {
+
    public static List<Integer> flatmap(Integer[][] matrix) {
        return Stream.of(matrix)
                .flatMap(Arrays::stream)
