@@ -67,6 +67,7 @@ public class Animal {
             animal.weight = weight;
             animal.height = height;
             animal.liveAverage = liveAverage;
+            return animal;
         }
     }
 }
