@@ -70,4 +70,16 @@ public class Animal {
             return animal;
         }
     }
+
+    public static void main(String[] args) {
+        Animal cat = new Builder()
+                .buildName("Рыжик")
+                .buildAge(3)
+                .buildType("Хищник")
+                .buildWeight(5.5)
+                .buildHeight(30.3)
+                .buildLiveAverage(13)
+                .build();
+        System.out.println(cat);
+    }
 }
