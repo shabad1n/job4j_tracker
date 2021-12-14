@@ -9,14 +9,14 @@ public class PhoneDictionaryTest {
 
     @Test
     public void whinEmptyList() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         ArrayList<Person> persons = phones.find("Petr");
         assertThat(persons.size(), is(0));
     }
 
     @Test
     public void whenFindByName() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
