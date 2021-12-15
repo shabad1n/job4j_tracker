@@ -1,7 +1,6 @@
 package ru.job4j.stream.attestation;
 
 import org.junit.Test;
-
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
