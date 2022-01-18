@@ -1,6 +1,5 @@
 package ru.job4j.stream.attestation;
 
-
 import java.util.Objects;
 
 public class Tuple {
